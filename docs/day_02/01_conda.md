@@ -10,7 +10,7 @@ By the end of this practical, you should be able to:
 
 - understand why software environments are important in bioinformatics
 - list available Conda environments
-- create a new Conda environment from a YAML file
+- create a new Conda environment
 - activate and deactivate Conda environments
 - check which software is available inside an environment
 - understand why a tool may not be available before activating the correct environment
@@ -33,8 +33,6 @@ First, let’s check which Conda environments are already available.
 
 ```bash
 conda env list
-# or
-conda info --envs
 ```
 You should see a list of environments. The **currently active environment** is marked with an asterisk (`*`).
 
@@ -48,34 +46,22 @@ base                  *  /home/user/miniconda3
 
 ---
 
-### 2. Inspect the environment file
-
-Conda environments can be described using a [YAML](https://en.wikipedia.org/wiki/YAML) file. This file acts like a recipe: it tells Conda which software should be installed.
-
-We will first inspect the environment file for `fastp`. This recipe tells Conda to create an environment containing `fastp`.
-
-```bash
-cat ~/2026-Workshop-HSPA-Tunisia/envs/fastp.yaml
-```
-
----
-
-### 3. Create a Conda environment from the YAML file
+### 2. Create Conda environment with `fastp`
 
 Now we can create the environment.
 
 ```bash
-conda env create -n fastp -f ~/2026-Workshop-HSPA-Tunisia/envs/fastp.yaml
+conda env create -n fastp -c bioconda fastp
 ```
 
 Here, we use two important parameters:
 
 - `-n fastp` gives the new environment the name **fastp**
-- `-f envs/fastp.yaml` tells Conda which YAML recipe file to use
+- `-c bioconda` specifies chanel from which to install fastp
 
 ---
 
-### 4. Check that the environment was created
+### 3. Check that the environment was created
 
 Now list the available Conda environments again.
 
@@ -88,7 +74,7 @@ You should now see an environment called **fastp**.
 
 ---
 
-### 5. Try running fastp before activating the environment
+### 4. Try running fastp before activating the environment
 
 The `conda activate` command lets you switch to a specific environment. 
 You can use any of the environments that were listed in the output of `conda env list` command. 
@@ -116,7 +102,7 @@ The software was installed inside the fastp Conda environment, but that environm
 
 ---
 
-### 6. Activate the Conda environment
+### 5. Activate the Conda environment
 
 To use software installed inside a Conda environment, we first need to activate it.
 
@@ -140,7 +126,7 @@ This time, you should see the fastp help message instead of an error.
 
 ---
 
-### 7. Check which version of fastp is installed
+### 6. Check which version of fastp is installed
 
 It is good practice to check software versions, especially when working on reproducible analyses.
 
@@ -150,7 +136,7 @@ fastp --version
 
 ---
 
-### 8. List software installed in the active environment
+### 7. List software installed in the active environment
 
 You can inspect what is installed in the current Conda environment with:
 
@@ -160,7 +146,7 @@ conda list
 
 ---
 
-### 9. Deactivate the environment
+### 8. Deactivate the environment
 
 When you are finished using an environment, you can deactivate it.
 
@@ -184,7 +170,7 @@ In this practical, you used the following Conda commands:
 | Command | Purpose |
 |---|---|
 | `conda env list` | List available Conda environments |
-| `conda env create -n fastp -f day_02/envs/fastp.yaml` | Create a new environment from a YAML file |
+| `conda env create -n fastp -c bioconda fastp` | Create a new environment |
 | `conda activate fastp` | Activate the `fastp` environment |
 | `conda list` | List installed packages in the active environment |
 | `conda deactivate` | Leave the active environment |
