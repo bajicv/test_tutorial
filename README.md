@@ -1,5 +1,11 @@
 # 2026-Workshop-HSPA-Tunisia
 
+---
+
+[Go to Tutorials.](./docs/README.md)
+
+---
+
 # Short-Read Analysis of Bacterial Pathogens
 
 ## Overview
@@ -91,6 +97,10 @@ Participants using Windows should install **WSL** — Windows Subsystem for Linu
 Installation instructions are available here:
 
 [Install WSL from the Microsoft Store](https://dev.to/brayandiazc/install-wsl-from-the-microsoft-store-111h)
+
+---
+
+[Go to Tutorials.](./docs/README.md)
 
 ---
 
