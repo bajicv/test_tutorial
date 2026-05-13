@@ -325,15 +325,6 @@ rm drafts/final_notes.txt
 ls drafts
 ```
 
-Remove an empty directory:
-
-```bash
-mkdir empty_dir
-ls
-rmdir empty_dir
-ls
-```
-
 Remove a directory and everything inside it:
 
 ```bash
@@ -343,11 +334,6 @@ ls
 
 > [!CAUTION]
 > Be careful with `rm`, especially with `rm -r`. Deleted files do not go to a recycle bin.
-
-### 💬 Discussion
-
-- Why is `rm -r` more dangerous than `rm`?
-- What is the difference between `rmdir` and `rm -r`?
 
 ---
 
@@ -441,7 +427,6 @@ head readme.txt
 | `mv` | Move or rename files or directories |
 | `rm` | Remove files |
 | `rm -r` | Remove directories recursively |
-| `rmdir` | Remove an empty directory |
 | `cat` | Print a file |
 | `less` | View a file page by page |
 | `head` | Show first lines |
