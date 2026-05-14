@@ -125,12 +125,12 @@ To avoid using too much space we will share loaction where we store Singularity 
 > If you are running Bactopia for the first time it may need to download Singularity images. Later runs are usually faster because the images are cached.
 
 ```bash
-export NXF_SINGULARITY_CACHEDIR=$PWD/singularity_cache
+export NXF_SINGULARITY_CACHEDIR=/shared/apptainer_images
 
 bactopia \
   --samples bactopia_samplesheet.txt \
   --coverage 100 \
-  --max_cpus 4 \
+  --max_cpus 2 \
   --outdir bactopia_kp \
   -profile singularity \
   -resume
@@ -142,7 +142,7 @@ Important options used here:
 |---|---|
 | `--samples bactopia_samplesheet.txt` | Use the samplesheet created with `bactopia prepare` |
 | `--coverage 100` | Downsample reads to a maximum target coverage of 100x |
-| `--max_cpus 4` | Use up to 4 CPU cores |
+| `--max_cpus 2` | Use up to 4 CPU cores |
 | `--outdir bactopia_kp` | Write output files to this directory |
 | `-profile singularity` | Run workflow steps using Singularity containers |
 | `-resume` | Continue from completed steps if the command is restarted |
