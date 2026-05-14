@@ -110,7 +110,8 @@ Let's copy one of the VCF files in our current working directory to explore it:
 
 ```bash
 cd ~/2026-Workshop-HSPA-Tunisia
-cp data/tutorial_data/amrfinderplus.tsv scratch
+cp data/tutorial_data/amrfinderplus.tsv scratch/
+cd scratch
 ```
 
 Search for one word:

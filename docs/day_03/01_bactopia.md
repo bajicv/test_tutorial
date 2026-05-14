@@ -74,12 +74,22 @@ cd analyses/bactopia
 
 ## 3. Check the input FASTQ files
 
-The FASTQ files are already available on the server.
+The FASTQ files are already available on your server in `/shared/fastq_files` kindly organized by Karim:
+
+```bash
+/shared
+├── fastq_files
+├── tools
+├── results
+├── conda-pkgs
+└── apptainer_images
+```
+
 
 Check the files.
 
 ```bash
-ls -lh input/
+ls -lh /shared/fastq_files
 ```
 
 You should see paired-end files for multiple samples.
@@ -94,7 +104,7 @@ For this workshop, we are working with *Klebsiella pneumoniae*. We will provide 
 
 ```bash
 bactopia prepare \
-  --path path/to/raw/fastq/files \
+  --path /shared/fastq_files \
   --species "Klebsiella pneumoniae" \
   --genome-size 5700000 \
   > bactopia_samplesheet.txt

@@ -7,7 +7,7 @@
 By the end of this practical, you should be able to:
 
 - explain why multiple sequence alignment is needed before phylogenetic analysis
-- prepare consensus genome sequences for tree inference
+- prepare assemblies for tree inference
 - align sequences with `mafft`
 - infer a maximum-likelihood phylogenetic tree with `IQ-TREE`
 - understand the most important IQ-TREE output files
@@ -23,21 +23,21 @@ In this practical, we will use assemblies produced during the previous analysis 
 The general workflow is:
 
 ```text
-consensus FASTA files
-  ↓
-multiple sequence alignment
-  ↓
+Bactopia assemblies
+↓
+prepared core-genome alignment: data/prepared/kp_core_alignment.fasta
+↓
 IQ-TREE
-  ↓
-phylogenetic tree
+↓
+treefile + interpretation
 ```
 
 > [!NOTE]
 > The raw reads and reference genomes are downloaded in the Day 02 tutorial:
 >
-> [Downloading datasets](../day_02/02_downloading_datasets.md)
+> [Downloading datasets](../day_02/02_downloading_dataset.md)
 >
-> This practical assumes that you already have reconstructed consensus sequences from the previous assembly practical.
+> This practical assumes that you already have assembly FASTA from the previous assembly practical.
 
 ---
 
@@ -88,10 +88,9 @@ ls -R analyses/iqtree
 
 ---
 
-## 3. Find consensus FASTA files
+## 3. Find assembly FASTA files
 
-The exact location of your consensus FASTA files depends on the previous assembly practical.
-Look for files that represent reconstructed consensus genomes, not reference genomes.
+The exact location of your assembly FASTA files depends on the previous assembly practical.
 Copy them into the input directory of iqtree `analyses/iqtree/input`.
 
 ---
@@ -101,19 +100,19 @@ Copy them into the input directory of iqtree `analyses/iqtree/input`.
 IQ-TREE works on one alignment file. Before alignment, we first combine all input sequences into one FASTA file.
 
 ```bash
-cat analyses/iqtree/input/*.fasta > analyses/iqtree/input/consensus_sequences.fasta
+cat analyses/iqtree/input/*.fasta > analyses/iqtree/input/assembly_sequences.fasta
 ```
 
 Check how many sequences are in the combined file.
 
 ```bash
-grep -c "^>" analyses/iqtree/input/consensus_sequences.fasta
+grep -c "^>" analyses/iqtree/input/assembly_sequences.fasta
 ```
 
 Inspect the sequence names.
 
 ```bash
-grep "^>" analyses/iqtree/input/consensus_sequences.fasta
+grep "^>" analyses/iqtree/input/assembly_sequences.fasta
 ```
 
 ---
@@ -135,14 +134,14 @@ awk '
   {
     print
   }
-' analyses/iqtree/input/consensus_sequences.fasta \
-  > analyses/iqtree/input/consensus_sequences.clean.fasta
+' analyses/iqtree/input/assembly_sequences.fasta \
+  > analyses/iqtree/input/assembly_sequences.clean.fasta
 ```
 
 Check the cleaned names.
 
 ```bash
-grep "^>" analyses/iqtree/input/consensus_sequences.clean.fasta
+grep "^>" analyses/iqtree/input/assembly_sequences.clean.fasta
 ```
 
 ---
@@ -152,15 +151,15 @@ grep "^>" analyses/iqtree/input/consensus_sequences.clean.fasta
 Even if sequences were produced by reference-based assembly, we still prepare a multiple sequence alignment before phylogenetic analysis.
 
 ```bash
-mafft --auto analyses/iqtree/input/consensus_sequences.clean.fasta \
-  > analyses/iqtree/alignment/consensus_sequences.aligned.fasta
+mafft --auto analyses/iqtree/input/assembly_sequences.clean.fasta \
+  > analyses/iqtree/alignment/assembly_sequences.aligned.fasta
 ```
 
 Check the alignment.
 
 ```bash
-grep -c "^>" analyses/iqtree/alignment/consensus_sequences.aligned.fasta
-head analyses/iqtree/alignment/consensus_sequences.aligned.fasta
+grep -c "^>" analyses/iqtree/alignment/assembly_sequences.aligned.fasta
+head analyses/iqtree/alignment/assembly_sequences.aligned.fasta
 ```
 
 > [!TIP]
@@ -175,11 +174,11 @@ Now run IQ-TREE on the alignment.
 
 ```bash
 iqtree \
-  -s analyses/iqtree/alignment/consensus_sequences.aligned.fasta \
+  -s analyses/iqtree/alignment/assembly_sequences.aligned.fasta \
   -m MFP \
   -B 1000 \
   -T AUTO \
-  --prefix analyses/iqtree/results/consensus_tree
+  --prefix analyses/iqtree/results/assembly_tree
 ```
 
 Meaning of the most important options:
@@ -254,7 +253,6 @@ Try to answer the following questions:
 2. Which IQ-TREE output file contains the final tree?
 3. What does `-m MFP` do?
 4. What does `-B 1000` mean?
-5. Why should Influenza genome segments not be mixed in one phylogenetic alignment?
 
 ---
 
@@ -269,8 +267,6 @@ Try to answer the following questions:
 | `grep -c "^>" file.fasta` | Count sequences |
 
 ---
-
-[Next tutorial](./02_nextclade.md)
 
 [⬅ Back to Day 04 overview](README.md)
 

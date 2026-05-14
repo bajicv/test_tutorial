@@ -51,13 +51,13 @@ base                  *  /home/user/miniconda3
 Now we can create the environment.
 
 ```bash
-conda env create -n fastp -c bioconda fastp
+conda create -n fastp -c bioconda fastp
 ```
 
 Here, we use two important parameters:
 
 - `-n fastp` gives the new environment the name **fastp**
-- `-c bioconda` specifies chanel from which to install fastp
+- `-c bioconda` specifies channel from which to install fastp
 
 ---
 
@@ -170,13 +170,13 @@ In this practical, you used the following Conda commands:
 | Command | Purpose |
 |---|---|
 | `conda env list` | List available Conda environments |
-| `conda env create -n fastp -c bioconda fastp` | Create a new environment |
+| `conda create -n fastp -c bioconda fastp` | Create a new environment |
 | `conda activate fastp` | Activate the `fastp` environment |
 | `conda list` | List installed packages in the active environment |
 | `conda deactivate` | Leave the active environment |
 
 ---
 
-[Next tutorial](./02_downloading_datasets.md)
+[Next tutorial](./02_downloading_dataset.md)
 
 [⬅ Back to main page](../README.md)

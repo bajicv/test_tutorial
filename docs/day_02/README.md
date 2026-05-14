@@ -15,7 +15,7 @@ By the end of Day 02, you should be able to:
 - install bioinformatics tools with Conda
 - understand the basic idea of containers
 - run quality control on sequencing reads
-- use `fastp` to assess and filter long-read sequencing data
+- use `fastp` to assess and filter Illumina paired-end short read sequencing data
 - interpret basic read quality metrics and QC plots
 
 ## 💻 Practicals

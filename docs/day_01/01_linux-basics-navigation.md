@@ -171,7 +171,7 @@ cd ~/2026-Workshop-HSPA-Tunisia
 ls data
 
 cd data
-ls ../day_02
+ls ..
 
 cd ..
 cd ./data
