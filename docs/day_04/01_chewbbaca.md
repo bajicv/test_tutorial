@@ -236,6 +236,8 @@ In this practical, you used chewBBACA to compare bacterial genomes.
 
 ---
 
+[Next Tutorial: use `msa_out/dna_msa_variable.fasta` in Phylogenetic Tree Inference with IQ-TREE](02_iqtree.md).
+
 [⬅ Back to Day 04 overview](README.md)
 
 [⬅ Back to main page](../README.md)
