@@ -106,7 +106,7 @@ zless ERR16718636.fna.gz
 
 ## 4. Search text with `grep`
 
-Let's copy one of the VCF files in our current working directory to explore it:
+Let's copy `amrfinderplus.tsv` in our current working directory to explore it:
 
 ```bash
 cd ~/2026-Workshop-HSPA-Tunisia
