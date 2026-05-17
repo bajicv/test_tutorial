@@ -78,7 +78,6 @@ mafft --version
 Create a clean directory for this practical.
 
 ```bash
-mkdir -p analyses/iqtree/input
 mkdir -p analyses/iqtree/alignment
 mkdir -p analyses/iqtree/results
 ```
@@ -99,7 +98,7 @@ Copy or link it into the IQ-TREE working directory.
 
 ```bash
 cp analyses/chewbbaca/msa_out/dna_msa_variable.fasta \
-  analyses/iqtree/alignment/chewbbaca_cgmlst_dna_variable.fasta
+  analyses/iqtree/alignment/
 ```
 
 ---
@@ -110,7 +109,7 @@ Now run IQ-TREE on the alignment.
 
 ```bash
 iqtree \
-  -s analyses/iqtree/alignment/assembly_sequences.aligned.fasta \
+  -s analyses/iqtree/alignment/dna_msa_variable.fasta \
   -m MFP \
   -B 1000 \
   -T AUTO \
