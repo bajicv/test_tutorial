@@ -52,10 +52,10 @@ First, move to the workshop repository.
 cd ~/2026-Workshop-HSPA-Tunisia
 ```
 
-Create a Conda environment with `IQ-TREE` and `mafft`.
+Create a Conda environment with `IQ-TREE`
 
 ```bash
-conda create -y -n iqtree -c conda-forge -c bioconda iqtree mafft
+conda create -y -n iqtree -c conda-forge -c bioconda iqtree
 ```
 
 Activate the environment.
@@ -113,7 +113,7 @@ iqtree \
   -m MFP \
   -B 1000 \
   -T AUTO \
-  --prefix analyses/iqtree/results/assembly_tree
+  --prefix analyses/iqtree/results/chewbbaca_cgmlst_dna_alignment
 ```
 
 Meaning of the most important options:
@@ -140,22 +140,22 @@ Important files include:
 
 | File                      | Purpose                                        |
 |---------------------------|------------------------------------------------|
-| `consensus_tree.iqtree`   | Main IQ-TREE report                            |
-| `consensus_tree.treefile` | Final maximum-likelihood tree in Newick format |
-| `consensus_tree.log`      | Log file from the run                          |
-| `consensus_tree.contree`  | Consensus tree with support values             |
-| `consensus_tree.ckp.gz`   | Checkpoint file                                |
+| `chewbbaca_cgmlst_dna_alignment.iqtree`   | Main IQ-TREE report                            |
+| `chewbbaca_cgmlst_dna_alignment.treefile` | Final maximum-likelihood tree in Newick format |
+| `chewbbaca_cgmlst_dna_alignment.log`      | Log file from the run                          |
+| `chewbbaca_cgmlst_dna_alignment.contree`  | Consensus tree with support values             |
+| `chewbbaca_cgmlst_dna_alignment.ckp.gz`   | Checkpoint file                                |
 
 Inspect the main report.
 
 ```bash
-less analyses/iqtree/results/consensus_tree.iqtree
+less analyses/iqtree/results/chewbbaca_cgmlst_dna_alignment.iqtree
 ```
 
 Print the final tree.
 
 ```bash
-cat analyses/iqtree/results/consensus_tree.treefile
+cat analyses/iqtree/results/chewbbaca_cgmlst_dna_alignment.treefile
 ```
 
 The `.treefile` file can be opened in tree visualization tools such as FigTree, iTOL, or the tree viewer used by your instructor.
