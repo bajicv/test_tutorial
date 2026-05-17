@@ -8,7 +8,6 @@ By the end of this practical, you should be able to:
 
 - explain why multiple sequence alignment is needed before phylogenetic analysis
 - use a chewBBACA-generated MSA for tree inference
-- infer a maximum-likelihood tree with `IQ-TREE`
 - infer a maximum-likelihood phylogenetic tree with `IQ-TREE`
 - understand the most important IQ-TREE output files
 - identify the tree file that can be opened in a tree viewer
