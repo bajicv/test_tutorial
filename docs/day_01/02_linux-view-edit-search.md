@@ -211,7 +211,7 @@ Count unique values:
 grep "OXA" amrfinderplus.tsv | cut -f 7 | sort | uniq -c
 ```
 
-Save unique serogroups to a new file:
+Save unique OXA to a new file:
 
 ```bash
 grep "OXA" amrfinderplus.tsv | cut -f 7 | sort | uniq -c > unique_OXA.txt
