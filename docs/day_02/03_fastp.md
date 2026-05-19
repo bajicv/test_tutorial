@@ -60,7 +60,7 @@ Create a working directory for this practical.
 
 ```bash
 mkdir -p analyses/fastp
-cd analyses/fastp
+cd analyses
 ```
 
 Create directories for input reads and filtered output files.
