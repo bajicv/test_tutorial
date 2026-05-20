@@ -8,7 +8,7 @@ By the end of this practical, you should be able to:
 
 - understand why _de novo_ assembly is useful for bacterial genome analysis
 - prepare a Bactopia samplesheet for multiple Illumina paired-end samples
-- run Bactopia using Singularity containers
+- run Bactopia using Singularity/Docker containers
 - inspect the main output folders created by Bactopia
 - find assembled genome files for downstream analysis
 - generate a simple summary report for all samples
@@ -17,7 +17,7 @@ By the end of this practical, you should be able to:
 
 `bactopia` is a workflow for bacterial genome analysis. In this practical, we will use it for de novo assembly of Illumina paired-end sequencing reads.
 
-The sequencing data are already available on the workshop server. You will first organize the input FASTQ files, then create a Bactopia samplesheet, and finally run Bactopia on multiple samples using Singularity.
+The sequencing data are already available on the workshop server. You will first organize the input FASTQ files, then create a Bactopia samplesheet, and finally run Bactopia on multiple samples using docker.
 
 The general workflow is:
 
@@ -45,10 +45,10 @@ Check that Bactopia is available.
 bactopia --version
 ```
 
-Check that Singularity is available.
+Check that docker is available.
 
 ```bash
-singularity --version
+docker --version
 ```
 
 If both commands print version information, you are ready to continue.
@@ -110,7 +110,7 @@ head bactopia_samplesheet.txt
 
 ## 5. Run Bactopia on multiple samples
 
-To avoid using too much space we will share loaction where we store Singularity images used in Bactopia. We can specify this location with variable `NXF_SINGULARITY_CACHEDIR`. We already downloaded these Singularity images and you can use them.
+To avoid using too much space we will share loaction where we store Singularity images used in Bactopia. We can specify this location with variable `NXF_SINGULARITY_CACHEDIR`. We already downloaded these Singularity images and you can use them with Docker.
 
 > If you are running Bactopia for the first time it may need to download Singularity images. Later runs are usually faster because the images are cached.
 
@@ -118,7 +118,7 @@ To avoid using too much space we will share loaction where we store Singularity 
 export NXF_SINGULARITY_CACHEDIR=/home/bios/.bactopia/singularity
 
 bactopia \
-  -profile singularity \
+  -profile docker \
   --samples bactopia_samplesheet.txt \
   --coverage 100 \
   --max_cpus 4 \
@@ -135,7 +135,7 @@ Important options used here:
 | `--max_cpus 4` | Use up to 4 CPU cores |
 | `--ask_merlin` | The merlin step automatically selects and runs species-specific typing tools based on Mash distance results from the sketcher step. |
 | `--outdir bactopia_kp` | Write output files to this directory |
-| `-profile singularity` | Run workflow steps using Singularity containers |
+| `-profile docker` | Run workflow steps using Docker |
 | `-resume` | Continue from completed steps if the command is restarted |
 
 Bactopia will run several steps, including read QC, assembly, assembly QC, annotation, MLST, and AMR screening.
@@ -197,13 +197,13 @@ Try to answer:
 
 ## 📌 Summary
 
-In this practical, you used `Bactopia` to process multiple Illumina paired-end bacterial samples using Singularity.
+In this practical, you used `Bactopia` to process multiple Illumina paired-end bacterial samples using Docker.
 
 | Step                  | Command or file                                                   | Purpose                                               |
 |-----------------------|-------------------------------------------------------------------|-------------------------------------------------------|
 | Prepare inputs        | `input/`                                                          | Store paired-end FASTQ files                          |
 | Create samplesheet    | `bactopia prepare`                                                | Detect samples and FASTQ pairs and output samplesheet |
-| Run Bactopia          | `bactopia --samples bactopia_samplesheet.txt -profile singularity`| Process all samples                                   |
+| Run Bactopia          | `bactopia --samples bactopia_samplesheet.txt -profile docker`| Process all samples                                   |
 | Resume workflow       | `-resume`                                                         | Continue from completed steps                         |
 | Summarize results     | `bactopia summary`                                                | Create combined reports                               |
 | Assemblies            | `*.fna.gz`                                                        | Genome assemblies for downstream analysis             |
