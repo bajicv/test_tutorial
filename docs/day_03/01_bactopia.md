@@ -115,7 +115,7 @@ To avoid using too much space we will share loaction where we store Singularity 
 > If you are running Bactopia for the first time it may need to download Singularity images. Later runs are usually faster because the images are cached.
 
 ```bash
-export NXF_SINGULARITY_CACHEDIR=/shared/apptainer_images
+export NXF_SINGULARITY_CACHEDIR=/home/bios/.bactopia/singularity
 
 bactopia \
   -profile singularity \
