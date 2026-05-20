@@ -179,6 +179,10 @@ Try to answer:
 
 ## 10. OPTIONAL | Create a multiple sequence alignment for IQ-TREE
 
+> [!WARNING]
+> To successfully run `ComputeMSA --dna-msa`, the `AlleleCall` run must not use `--no-inferred`.
+> With `--no-inferred`, newly inferred allele IDs can still appear in `results_alleles.tsv`, but their sequences are not added to the schema. `ComputeMSA --dna-msa` then cannot reconstruct the DNA sequences for those alleles.
+
 The allele calling result can also be converted into a multiple sequence alignment.
 This alignment will be used in the next practical with IQ-TREE.
 
