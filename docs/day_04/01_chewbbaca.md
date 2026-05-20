@@ -130,6 +130,7 @@ chewBBACA.py AlleleCall \
     -o allele_call_out \
     --cpu 8 \
     --output-masked \
+    --hash-profile sha256 \
     --no-inferred 
 ```
 
@@ -191,33 +192,13 @@ chewBBACA.py ComputeMSA \
   --cpu 8
 ```
 
-When the input is a TSV file containing allelic profiles, the output folder structure is as follows:
-```bash
-msa_out
-├── dna_msa.fasta                   (if --dna-msa is used)
-├── dna_msa_variable.fasta          (if --output-variable and --dna-msa are used)
-├── protein_msa.fasta
-├── protein_msa_variable.fasta      (if --output-variable is used)
-└── summary_stats.tsv
-```
-
 Check the output files.
 
 ```bash
 ls -lh msa_out
 ```
 
-Important output files include:
-
-| File                                | Purpose                                        |
-|-------------------------------------|------------------------------------------------|
-| msa_out/dna_msa.fasta               | Complete DNA alignment from allele calls       |
-| msa_out/dna_msa_variable.fasta	    | DNA alignment with variable positions only     |
-| msa_out/protein_msa.fasta	          | Complete protein alignment                     |
-| msa_out/protein_msa_variable.fasta	| Protein alignment with variable positions only |
-| msa_out/summary_stats.tsv	          | Summary of loci included in the MSA            |
-
-For the next IQ-TREE practical, we will use `msa_out/dna_msa_variable.fasta`.
+For the next IQ-TREE practical, we will use `msa_out/sample_MSAs/dna/concat.fasta`.
 
 ---
 
