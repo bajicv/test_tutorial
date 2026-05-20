@@ -128,9 +128,14 @@ chewBBACA.py AlleleCall \
     -i assemblies \
     -g /shared/chewbbaca_prepared_schema \
     -o allele_call_out \
-    --cpu 4
+    --cpu 8 \
+    --no-inferred 
 ```
 
+> [!NOTE]
+> `--no-inferred` ensures that the process will not add the sequences of inferred alleles (INF) to the schema.
+> Allelic profiles will still include the allele identifiers attributed to the inferred alleles.
+> **Use this parameter if the schema is being accessed by multiple processes/users simultaneously**.
 
 ---
 
@@ -141,7 +146,7 @@ chewBBACA.py AlleleCallEvaluator \
     -i allele_call_out \
     -g /shared/chewbbaca_prepared_schema \
     -o allele_call_evaluator_out \
-    --cpu 4
+    --cpu 8
 ```
 
 > [!NOTE]
@@ -182,7 +187,7 @@ chewBBACA.py ComputeMSA \
   -o msa_out \
   --dna-msa \
   --output-variable \
-  --cpu 2
+  --cpu 8
 ```
 
 When the input is a TSV file containing allelic profiles, the output folder structure is as follows:
