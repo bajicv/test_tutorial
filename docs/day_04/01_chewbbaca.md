@@ -129,6 +129,7 @@ chewBBACA.py AlleleCall \
     -g /shared/chewbbaca_prepared_schema \
     -o allele_call_out \
     --cpu 8 \
+    --output-masked \
     --no-inferred 
 ```
 
