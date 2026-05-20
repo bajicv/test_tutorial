@@ -192,7 +192,6 @@ chewBBACA.py ComputeMSA \
   -g /shared/chewbbaca_prepared_schema \
   -o msa_out \
   --dna-msa \
-  --output-variable \
   --cpu 8
 ```
 
@@ -213,11 +212,11 @@ In this practical, you used chewBBACA to compare bacterial genomes.
 | Step              | Tool                       | Main output                      |
 |-------------------|----------------------------|----------------------------------|
 | Allele calling    | `chewBBACA AlleleCall`     | `results_alleles.tsv`            |
-| MSA generation    | `chewBBACA ComputeMSA`     | `msa_out/dna_msa_variable.fasta` |
+| MSA generation    | `chewBBACA ComputeMSA`     | `msa_out/dna_msae.fasta` |
 
 ---
 
-[Next Tutorial: use `msa_out/dna_msa_variable.fasta` in Phylogenetic Tree Inference with IQ-TREE](02_iqtree.md).
+[Next Tutorial: use `msa_out/dna_msa.fasta` in Phylogenetic Tree Inference with IQ-TREE](02_iqtree.md).
 
 [⬅ Back to Day 04 overview](README.md)
 
