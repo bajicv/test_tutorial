@@ -41,7 +41,7 @@ treefile + interpretation
 
 > [!NOTE]
 > This practical assumes that you completed the previous chewBBACA practical and created:
-> `analyses/chewbbaca/msa_out/dna_msa_variable.fasta`
+> `analyses/chewbbaca/msa_out/dna_msa.fasta`
 ---
 
 ## 1. Create and activate the Conda environment
@@ -64,11 +64,10 @@ Activate the environment.
 conda activate iqtree
 ```
 
-Check that the tools are available.
+Check that the tool is available.
 
 ```bash
 iqtree --version
-mafft --version
 ```
 
 ---
@@ -97,8 +96,7 @@ The previous chewBBACA practical produced a multiple sequence alignment with `Co
 Copy or link it into the IQ-TREE working directory.
 
 ```bash
-cp analyses/chewbbaca/msa_out/dna_msa_variable.fasta \
-  analyses/iqtree/alignment/
+cp analyses/chewbbaca/msa_out/dna_msa.fasta analyses/iqtree/alignment/
 ```
 
 ---
@@ -108,12 +106,14 @@ cp analyses/chewbbaca/msa_out/dna_msa_variable.fasta \
 Now run IQ-TREE on the alignment.
 
 ```bash
+cd ~/2026-Workshop-HSPA-Tunisia/analyses/iqtree
+
 iqtree \
-  -s analyses/iqtree/alignment/dna_msa_variable.fasta \
+  -s alignment/dna_msa.fasta \
   -m MFP \
   -B 1000 \
   -T AUTO \
-  --prefix analyses/iqtree/results/chewbbaca_cgmlst_dna_alignment
+  --prefix results/chewbbaca_cgmlst_dna_alignment
 ```
 
 Meaning of the most important options:
@@ -195,7 +195,7 @@ Try to answer the following questions:
 
 | Command | Purpose |
 |---|---|
-| `chewBBACA.py ComputeMSA ... --dna-msa --output-variable` | Create an MSA from allele calling results |
+| `chewBBACA.py ComputeMSA ... --dna-msa | Create an DNA MSA from allele calling results |
 | `conda activate iqtree` | Activate the IQ-TREE environment |
 | `iqtree -s aligned.fasta -m MFP -B 1000 -T AUTO` | Infer a maximum-likelihood tree |
 | `grep "^>" file.fasta` | Show sequence names |
