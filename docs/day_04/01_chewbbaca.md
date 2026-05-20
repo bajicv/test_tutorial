@@ -76,7 +76,7 @@ cd analyses/chewbbaca
 Decompress `.gz` files.
 
 ```bash
-gunzip -k assemblies/*
+gunzip assemblies/*
 ```
 
 ---
