@@ -107,7 +107,7 @@ This is how it was done:
 chewBBACA.py PrepExternalSchema \
     -g Kpneumoniae_complex_cgmlst \
     -o chewbbaca_prepared_schema \
-    --cpu 36 \
+    --cpu 16 \
     --ptf /shared/prodigal_training_files/Klebsiella_pneumoniae.trn
 ```
 
@@ -128,7 +128,7 @@ chewBBACA.py AlleleCall \
     -i assemblies \
     -g /shared/cgmlst_schema/chewbbaca_prepared_schema \
     -o allele_call_out \
-    --cpu 8 \
+    --cpu 6 \
     --output-masked \
     --hash-profile sha256 \
     --no-inferred 
@@ -148,7 +148,7 @@ chewBBACA.py AlleleCallEvaluator \
     -i allele_call_out \
     -g /shared/chewbbaca_prepared_schema \
     -o allele_call_evaluator_out \
-    --cpu 8
+    --cpu 6
 ```
 
 > [!NOTE]
@@ -192,7 +192,7 @@ chewBBACA.py ComputeMSA \
   -g /shared/chewbbaca_prepared_schema \
   -o msa_out \
   --dna-msa \
-  --cpu 8
+  --cpu 6
 ```
 
 Check the output files.
