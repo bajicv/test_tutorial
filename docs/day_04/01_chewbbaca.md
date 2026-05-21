@@ -126,7 +126,7 @@ cd ~/2026-Workshop-HSPA-Tunisia/analyses/chewbbaca/
 # run chewbbaca allele calling
 chewBBACA.py AlleleCall \
     -i assemblies \
-    -g /shared/chewbbaca_prepared_schema \
+    -g /shared/cgmlst_schema/chewbbaca_prepared_schema \
     -o allele_call_out \
     --cpu 8 \
     --output-masked \
