@@ -146,7 +146,7 @@ chewBBACA.py AlleleCall \
 ```bash
 chewBBACA.py AlleleCallEvaluator \
     -i allele_call_out \
-    -g /shared/chewbbaca_prepared_schema \
+    -g /shared/cgmlst_schema/chewbbaca_prepared_schema \
     -o allele_call_evaluator_out \
     --cpu 6
 ```
