@@ -1,0 +1,68 @@
+/* GitHub-style Markdown alerts */
+.main-content blockquote.github-alert {
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  color: inherit;
+  background-color: transparent;
+  border-left: 0.25em solid;
+}
+
+.main-content blockquote.github-alert::before {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+.main-content blockquote.github-alert > :last-child {
+  margin-bottom: 0;
+}
+
+/* NOTE */
+.main-content blockquote.github-alert-note {
+  border-left-color: #0969da;
+}
+
+.main-content blockquote.github-alert-note::before {
+  color: #0969da;
+  content: "Note";
+}
+
+/* TIP */
+.main-content blockquote.github-alert-tip {
+  border-left-color: #1a7f37;
+}
+
+.main-content blockquote.github-alert-tip::before {
+  color: #1a7f37;
+  content: "Tip";
+}
+
+/* IMPORTANT */
+.main-content blockquote.github-alert-important {
+  border-left-color: #8250df;
+}
+
+.main-content blockquote.github-alert-important::before {
+  color: #8250df;
+  content: "Important";
+}
+
+/* WARNING */
+.main-content blockquote.github-alert-warning {
+  border-left-color: #9a6700;
+}
+
+.main-content blockquote.github-alert-warning::before {
+  color: #9a6700;
+  content: "Warning";
+}
+
+/* CAUTION */
+.main-content blockquote.github-alert-caution {
+  border-left-color: #d1242f;
+}
+
+.main-content blockquote.github-alert-caution::before {
+  color: #d1242f;
+  content: "Caution";
+}

@@ -18,6 +18,8 @@ relative_links:
 
 search_enabled: true
 
+enable_copy_code_button: true
+
 aux_links:
   "Workshop repository":
     - "https://github.com/bajicv/test_tutorial"
