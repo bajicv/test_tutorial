@@ -5,13 +5,17 @@ url: "https://bajicv.github.io"
 baseurl: "/test_tutorial"
 
 remote_theme: just-the-docs/just-the-docs@v0.12.0
-color_scheme: github_light
+color_scheme: tutorial_light
 
 plugins:
   - jekyll-remote-theme
   - jekyll-optional-front-matter
   - jekyll-relative-links
   - jekyll-titles-from-headings
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+  - jekyll-include-cache
+  - jekyll-sitemap
 
 relative_links:
   enabled: true
@@ -66,4 +70,5 @@ callouts:
     title: "💬 Discussion"
     color: purple
 
-callouts_opacity: 0.3
+callouts_opacity: 0.20
+callouts_level: quiet
