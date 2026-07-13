@@ -4,7 +4,7 @@ nav_order: 6
 nav_exclude: false
 has_children: false
 has_toc: false
-permalink: /
+permalink: /evaluations/
 ---
 
 # 📝 Evaluations

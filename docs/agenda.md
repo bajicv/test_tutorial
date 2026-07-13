@@ -4,12 +4,12 @@ nav_order: 2
 nav_exclude: false
 has_children: false
 has_toc: false
-permalink: /
+permalink: /agenda/
 ---
 
-## Agenda
 
----
+# Agenda
+
 
 ## Agenda Overview
 
@@ -67,34 +67,3 @@ permalink: /
 | 14:45 - 15:00 | ☕ Break                                   |
 | 15:00 - 16:45 | Hands-On: Assembly QC                      |
 | 16:45 - 17:00 | Recap & Daily Feedback                     |
-
-### [Day 04 | 2026-05-21 | Thursday](day_04/README.md)
-
-| Time          | Activity                 |
-|---------------|--------------------------|
-| 09:00 - 09:30 | Recap                    |
-| 09:30 - 10:45 | Talk: MLST and cgMLST    |
-| 10:45 - 11:00 | ☕ Break                 |
-| 11:00 - 12:00 | Hands-On: cgMLST         |
-| 12:00 - 13:00 | 🍽️ Lunch Break           |
-| 13:00 - 13:30 | Participant Presentation |
-| 13:30 - 14:45 | Hands-On: cgMLST         |
-| 14:45 - 15:00 | ☕ Break                 |
-| 15:00 - 16:45 | Hands-On: cgMLST         |
-| 16:45 - 17:00 | Recap & Daily Feedback   |
-
-### [Day 05 | 2026-05-22 | Friday](day_05/README.md)
-
-| Time          | Activity                                 |
-|---------------|------------------------------------------|
-| 09:00 - 09:30 | Recap                                    |
-| 09:30 - 10:45 | Hands-On: Bring Your Own Data            |
-| 10:45 - 11:00 | ☕ Break                                 |
-| 11:00 - 12:00 | Hands-On: Bring Your Own Data            |
-| 12:00 - 13:00 | 🍽️ Lunch Break                           |
-| 13:00 - 14:45 | Hands-On: Bring Your Own Data            |
-| 14:45 - 15:00 | ☕ Break                                 |
-| 15:00 - 16:00 | Hands-On: Bring Your Own Data            |
-| 16:00 - 16:30 | Recap & Workshop Feedback                |
-| 16:30 - 17:00 | Farewell                                 |
-
