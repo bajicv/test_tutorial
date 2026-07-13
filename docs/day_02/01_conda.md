@@ -1,5 +1,5 @@
 ---
-title: Linux Basics and Navigation
+title: Conda
 parent: Day 02
 nav_order: 1
 nav_exclude: false
