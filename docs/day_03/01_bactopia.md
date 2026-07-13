@@ -1,5 +1,5 @@
 ---
-title: Linux Basics and Navigation
+title: Bactopia
 parent: Day 03
 nav_order: 1
 nav_exclude: false
