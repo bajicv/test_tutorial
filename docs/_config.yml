@@ -35,26 +35,41 @@ defaults:
 
 callouts:
   note:
-    title: Note
+    title: "ℹ️ Note"
     color: blue
-    opacity: 0.15
+    opacity: 0.5
 
   tip:
-    title: Tip
+    title: "💡 Tip"
     color: green
-    opacity: 0.15
+    opacity: 0.5
 
   important:
-    title: Important
+    title: "❗ Important"
     color: purple
-    opacity: 0.15
+    opacity: 0.5
 
   warning:
-    title: Warning
+    title: "⚠️ Warning"
     color: yellow
-    opacity: 0.25
+    opacity: 0.5
 
   caution:
-    title: Caution
+    title: "🛑 Caution"
     color: red
-    opacity: 0.20
+    opacity: 0.5
+
+  question:
+    title: "❓ Question"
+    color: blue
+    opacity: 0.5
+
+  task:
+    title: "✅ Task"
+    color: green
+    opacity: 0.5
+
+  discussion:
+    title: "💬 Discussion"
+    color: purple
+    opacity: 0.5
