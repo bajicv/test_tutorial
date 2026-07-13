@@ -69,6 +69,3 @@ callouts:
   discussion:
     title: "💬 Discussion"
     color: purple
-
-callouts_opacity: 0.20
-callouts_level: quiet
