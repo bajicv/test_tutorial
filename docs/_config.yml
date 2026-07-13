@@ -4,7 +4,7 @@ description: Short-read analysis of bacterial pathogens
 url: "https://bajicv.github.io"
 baseurl: "/test_tutorial"
 
-remote_theme: just-the-docs/just-the-docs@v0.12.0
+remote_theme: just-the-docs/just-the-docs@v0.4.0
 color_scheme: tutorial_light
 
 plugins:
