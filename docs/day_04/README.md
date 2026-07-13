@@ -1,3 +1,10 @@
+---
+title: Day 04
+nav_order: 5
+nav_exclude: false
+permalink: /day_04/
+---
+
 # Day 04 — Phylogenetics, IQ-TREE, cgMLST
 
 ## Overview

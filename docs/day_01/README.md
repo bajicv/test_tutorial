@@ -1,3 +1,10 @@
+---
+title: Day 01
+nav_order: 2
+nav_exclude: false
+permalink: /day_01/
+---
+
 # Day 01 — Linux Introduction
 
 ## 📝 Pre-Training Assessment

@@ -1,3 +1,10 @@
+---
+title: Viewing, Editing, and Searching Files
+parent: Day 01
+nav_order: 2
+nav_exclude: false
+---
+
 [⬅ Back to main page](../README.md)
 
 # Viewing, Editing, Compressing, and Searching Files

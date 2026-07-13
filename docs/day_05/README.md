@@ -1,3 +1,10 @@
+---
+title: Day 01
+nav_order: 2
+nav_exclude: false
+permalink: /day_01/
+---
+
 # Day 05 — Working on Your Own Data
 
 ## Overview

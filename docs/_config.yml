@@ -1,0 +1,32 @@
+title: HSPA Tunisia Bioinformatics Workshop
+description: Short-read analysis of bacterial pathogens
+
+url: "https://bajicv.github.io/2026-Workshop-HSPA-Tunisia"
+baseurl: "/2026-Workshop-HSPA-Tunisia"
+
+remote_theme: just-the-docs/just-the-docs@v0.12.0
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-optional-front-matter
+  - jekyll-relative-links
+  - jekyll-titles-from-headings
+
+relative_links:
+  enabled: true
+  collections: true
+
+search_enabled: true
+
+aux_links:
+  "Workshop repository":
+    - "https://github.com/bajicv/2026-Workshop-HSPA-Tunisia"
+
+# Render all Markdown pages with the theme, but do not automatically
+# put every practical exercise into the navigation menu.
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      nav_exclude: true

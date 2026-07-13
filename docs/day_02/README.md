@@ -1,3 +1,10 @@
+---
+title: Day 02
+nav_order: 3
+nav_exclude: false
+permalink: /day_02/
+---
+
 # Day 02 — Data, Software, and Read Quality Control
 
 Day 02 focuses on good practices for managing bioinformatics projects, software environments, and sequencing data. You will learn how to organize input data, keep analyses reproducible, and use common tools for assessing sequencing read quality.
