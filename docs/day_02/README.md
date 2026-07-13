@@ -2,6 +2,8 @@
 title: Day 02
 nav_order: 3
 nav_exclude: false
+has_children: true
+has_toc: false
 permalink: /day_02/
 ---
 
