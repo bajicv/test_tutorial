@@ -1,5 +1,5 @@
 ---
-title: Linux Basics and Navigation
+title: fastp
 parent: Day 02
 nav_order: 3
 nav_exclude: false
