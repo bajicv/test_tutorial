@@ -1,8 +1,8 @@
 ---
-title: Day 01
-nav_order: 2
+title: Day 05
+nav_order: 6
 nav_exclude: false
-permalink: /day_01/
+permalink: /day_05/
 ---
 
 # Day 05 — Working on Your Own Data
