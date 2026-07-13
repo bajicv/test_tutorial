@@ -1,3 +1,10 @@
+---
+title: Day 03
+nav_order: 4
+nav_exclude: false
+permalink: /day_03/
+---
+
 # Day 03 — De novo Genome Assembly with Bactopia
 
 Day 03 focuses on bacterial genome assembly from sequencing reads. You will learn why genome assembly is needed, how paired-end Illumina reads can be reconstructed into contigs, and how assembly results can be assessed before downstream analyses.
