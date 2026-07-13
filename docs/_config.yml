@@ -1,4 +1,4 @@
-title: HSPA Tunisia Bioinformatics Workshop
+title: BioInfo Workshop
 description: Short-read analysis of bacterial pathogens
 
 url: "https://bajicv.github.io"
@@ -17,7 +17,6 @@ relative_links:
   collections: true
 
 search_enabled: true
-
 enable_copy_code_button: true
 
 aux_links:
@@ -32,3 +31,24 @@ defaults:
     values:
       layout: default
       nav_exclude: true
+
+callouts:
+  note:
+    title: Note
+    color: blue
+
+  tip:
+    title: Tip
+    color: green
+
+  important:
+    title: Important
+    color: purple
+
+  warning:
+    title: Warning
+    color: yellow
+
+  caution:
+    title: Caution
+    color: red

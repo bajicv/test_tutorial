@@ -9,7 +9,26 @@ nav_exclude: false
 
 # Linux Basics, Navigation, and File Management
 
+{: .warning }
+> Do not run this command outside the workshop directory.
+
+{: .important }
+> Activate the Conda environment before running the workflow.
+
+{: .note }
+> This command displays the current working directory.
+
+{: .tip }
+> Use the Tab key to complete filenames and directory names.
+
+{: .caution }
+> Be careful with `rm -r`. Deleted files cannot easily be recovered.
+
+{: .important }
+> Activate the Conda environment before running the workflow.
+
 ## 🎯 Learning goals
+
 
 By the end of this lesson, you should be able to:
 
@@ -188,7 +207,7 @@ cd ./data
 
 ## 6. Create files and directories
 
-> [!TIP]
+{: .tip}
 > **Naming files and directories in the Linux command line**
 > 
 > Good file and directory names make your work easier, especially when using tab completion, scripts, and command-line tools.
@@ -339,7 +358,7 @@ rm -r drafts_copy
 ls
 ```
 
-> [!CAUTION]
+{: .caution }
 > Be careful with `rm`, especially with `rm -r`. Deleted files do not go to a recycle bin.
 
 ---

@@ -1,3 +1,10 @@
+---
+title: Linux Basics and Navigation
+parent: Day 03
+nav_order: 1
+nav_exclude: false
+---
+
 # De novo Genome Assembly with `Bactopia`
 
 ![bactopia-logo](https://bactopia.io/img/bactopia-logo.png)
@@ -25,7 +32,7 @@ The general workflow is:
 paired-end FASTQ files → samplesheet → Bactopia → assemblies and reports
 ```
 
-> [!NOTE]
+{: .note}
 >
 > For detailed tutorials, please check beautiful and [detailed documentation provided by Bactopia developers](https://bactopia.io/)
 

@@ -1,3 +1,10 @@
+---
+title: Linux Basics and Navigation
+parent: Day 02
+nav_order: 1
+nav_exclude: false
+---
+
 [⬅ Back to main page](../README.md)
 
 # Conda
