@@ -1,5 +1,5 @@
 ---
-title: Linux Basics and Navigation
+title: dataset
 parent: Day 02
 nav_order: 2
 nav_exclude: false
