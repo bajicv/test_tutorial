@@ -1,5 +1,5 @@
 ---
-title: overview
+title: Home
 nav_order: 1
 nav_exclude: false
 has_children: false
@@ -53,19 +53,6 @@ Upon completion of the workshop, participants will be able to:
 - identify antimicrobial resistance determinants
 - apply the learned methods to their own sequencing datasets
 
----
-
-## Agenda
-
-| Date | Day | Activity |
-|---|---:|---|
-| Mon, 18 May 2026 | Day 1 | Introduction, workshop overview, Linux basics |
-| Tue, 19 May 2026 | Day 2 | Data and software management with Conda and containers, quality control |
-| Wed, 20 May 2026 | Day 3 | Genome assembly and assembly quality control |
-| Thu, 21 May 2026 | Day 4 | MLST, cgMLST |
-| Fri, 22 May 2026 | Day 5 | Bring your own data, Q&A |
-
----
 
 ## What should participants do before the workshop?
 
